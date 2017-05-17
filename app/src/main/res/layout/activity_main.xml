@@ -11,16 +11,29 @@
     tools:context="me.sekitaka.pendingintentextra.MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:src="@drawable/ic_add_white_24dp"
-            android:layout_width="wrap_content"
+        <TextView
+            android:text="結果はLogcatで確認"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/sub"
-            android:layout_width="wrap_content"
+
+        <Button
+            android:id="@+id/serializable"
+            android:text="Serializableがnullになる"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/serializable_with_other"
+            android:text="Serializable以外の値も影響を受ける"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/byte_serializable_with_other"
+            android:text="byte[]を通してSerializableを渡す"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
 </RelativeLayout>
